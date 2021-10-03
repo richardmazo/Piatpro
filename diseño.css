@@ -118,6 +118,13 @@
   background: linear-gradient(0deg, #000000ef, transparent);
 }
 
+.contenedor .tarjeta:nth-child(4) .content {
+  background: -webkit-gradient(linear, left bottom, left top, from(#000000ef), to(transparent));
+  background: -webkit-linear-gradient(bottom, #000000ef, transparent);
+  background: -o-linear-gradient(bottom, #000000ef, transparent);
+  background: linear-gradient(0deg, #000000ef, transparent);
+}
+
 .contenedor .tarjeta .content h2 {
   margin: 0 0 10px;
   padding: 0;
