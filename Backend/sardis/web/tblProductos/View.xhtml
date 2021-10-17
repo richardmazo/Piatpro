@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.ViewTblProductosTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputText value="#{bundle.ViewTblProductosLabel_idProducto}"/>
+                    <h:outputText value="#{tblProductosController.selected.idProducto}" title="#{bundle.ViewTblProductosTitle_idProducto}"/>
+                    <h:outputText value="#{bundle.ViewTblProductosLabel_titulo}"/>
+                    <h:outputText value="#{tblProductosController.selected.titulo}" title="#{bundle.ViewTblProductosTitle_titulo}"/>
+                    <h:outputText value="#{bundle.ViewTblProductosLabel_referencia}"/>
+                    <h:outputText value="#{tblProductosController.selected.referencia}" title="#{bundle.ViewTblProductosTitle_referencia}"/>
+                    <h:outputText value="#{bundle.ViewTblProductosLabel_talla}"/>
+                    <h:outputText value="#{tblProductosController.selected.talla}" title="#{bundle.ViewTblProductosTitle_talla}"/>
+                    <h:outputText value="#{bundle.ViewTblProductosLabel_color}"/>
+                    <h:outputText value="#{tblProductosController.selected.color}" title="#{bundle.ViewTblProductosTitle_color}"/>
+                    <h:outputText value="#{bundle.ViewTblProductosLabel_stock}"/>
+                    <h:outputText value="#{tblProductosController.selected.stock}" title="#{bundle.ViewTblProductosTitle_stock}"/>
+                    <h:outputText value="#{bundle.ViewTblProductosLabel_descripcion}"/>
+                    <h:outputText value="#{tblProductosController.selected.descripcion}" title="#{bundle.ViewTblProductosTitle_descripcion}"/>
+                </h:panelGrid>
+                <br />
+                <h:commandLink action="#{tblProductosController.destroyAndView}" value="#{bundle.ViewTblProductosDestroyLink}"/>
+                <br />
+                <br />
+                <h:link outcome="Edit" value="#{bundle.ViewTblProductosEditLink}"/>
+                <br />
+                <h:commandLink action="#{tblProductosController.prepareCreate}" value="#{bundle.ViewTblProductosCreateLink}" />
+                <br />
+                <h:commandLink action="#{tblProductosController.prepareList}" value="#{bundle.ViewTblProductosShowAllLink}"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.ViewTblProductosIndexLink}"/>
+
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

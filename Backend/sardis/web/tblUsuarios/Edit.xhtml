@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.EditTblUsuariosTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputLabel value="#{bundle.EditTblUsuariosLabel_idUsuario}" for="idUsuario" />
+                    <h:inputText id="idUsuario" value="#{tblUsuariosController.selected.idUsuario}" title="#{bundle.EditTblUsuariosTitle_idUsuario}" required="true" requiredMessage="#{bundle.EditTblUsuariosRequiredMessage_idUsuario}"/>
+                    <h:outputLabel value="#{bundle.EditTblUsuariosLabel_correo}" for="correo" />
+                    <h:inputText id="correo" value="#{tblUsuariosController.selected.correo}" title="#{bundle.EditTblUsuariosTitle_correo}" required="true" requiredMessage="#{bundle.EditTblUsuariosRequiredMessage_correo}"/>
+                    <h:outputLabel value="#{bundle.EditTblUsuariosLabel_contraseña}" for="contraseña" />
+                    <h:inputText id="contraseña" value="#{tblUsuariosController.selected.contraseña}" title="#{bundle.EditTblUsuariosTitle_contraseña}" required="true" requiredMessage="#{bundle.EditTblUsuariosRequiredMessage_contraseña}"/>
+                    <h:outputLabel value="#{bundle.EditTblUsuariosLabel_direccion}" for="direccion" />
+                    <h:inputText id="direccion" value="#{tblUsuariosController.selected.direccion}" title="#{bundle.EditTblUsuariosTitle_direccion}" required="true" requiredMessage="#{bundle.EditTblUsuariosRequiredMessage_direccion}"/>
+                    <h:outputLabel value="#{bundle.EditTblUsuariosLabel_idRol}" for="idRol" />
+                    <h:selectOneMenu id="idRol" value="#{tblUsuariosController.selected.idRol}" title="#{bundle.EditTblUsuariosTitle_idRol}" required="true" requiredMessage="#{bundle.EditTblUsuariosRequiredMessage_idRol}">
+                        <f:selectItems value="#{tblRolController.itemsAvailableSelectOne}"/>
+                    </h:selectOneMenu>
+                </h:panelGrid>
+                <h:commandLink action="#{tblUsuariosController.update}" value="#{bundle.EditTblUsuariosSaveLink}"/>
+                <br />
+                <br />
+                <h:link outcome="View" value="#{bundle.EditTblUsuariosViewLink}"/>
+                <br />
+                <h:commandLink action="#{tblUsuariosController.prepareList}" value="#{bundle.EditTblUsuariosShowAllLink}" immediate="true"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.EditTblUsuariosIndexLink}" />
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.ListTblUsuariosTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:form styleClass="jsfcrud_list_form">
+                <h:panelGroup id="messagePanel" layout="block">
+                    <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+                </h:panelGroup>
+                <h:outputText escape="false" value="#{bundle.ListTblUsuariosEmpty}" rendered="#{tblUsuariosController.items.rowCount == 0}"/>
+                <h:panelGroup rendered="#{tblUsuariosController.items.rowCount > 0}">
+                    <h:outputText value="#{tblUsuariosController.pagination.pageFirstItem + 1}..#{tblUsuariosController.pagination.pageLastItem + 1}/#{tblUsuariosController.pagination.itemsCount}"/>&nbsp;
+                    <h:commandLink action="#{tblUsuariosController.previous}" value="#{bundle.Previous} #{tblUsuariosController.pagination.pageSize}" rendered="#{tblUsuariosController.pagination.hasPreviousPage}"/>&nbsp;
+                    <h:commandLink action="#{tblUsuariosController.next}" value="#{bundle.Next} #{tblUsuariosController.pagination.pageSize}" rendered="#{tblUsuariosController.pagination.hasNextPage}"/>&nbsp;
+                    <h:dataTable value="#{tblUsuariosController.items}" var="item" border="0" cellpadding="2" cellspacing="0" rowClasses="jsfcrud_odd_row,jsfcrud_even_row" rules="all" style="border:solid 1px">
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblUsuariosTitle_idUsuario}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.idUsuario}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblUsuariosTitle_correo}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.correo}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblUsuariosTitle_contraseña}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.contraseña}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblUsuariosTitle_direccion}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.direccion}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTblUsuariosTitle_idRol}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.idRol}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="&nbsp;"/>
+                            </f:facet>
+                            <h:commandLink action="#{tblUsuariosController.prepareView}" value="#{bundle.ListTblUsuariosViewLink}"/>
+                            <h:outputText value=" "/>
+                            <h:commandLink action="#{tblUsuariosController.prepareEdit}" value="#{bundle.ListTblUsuariosEditLink}"/>
+                            <h:outputText value=" "/>
+                            <h:commandLink action="#{tblUsuariosController.destroy}" value="#{bundle.ListTblUsuariosDestroyLink}"/>
+                        </h:column>
+                    </h:dataTable>
+                </h:panelGroup>
+                <br />
+                <h:commandLink action="#{tblUsuariosController.prepareCreate}" value="#{bundle.ListTblUsuariosCreateLink}"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.ListTblUsuariosIndexLink}"/>
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

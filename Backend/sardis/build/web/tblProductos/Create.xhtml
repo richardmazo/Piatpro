@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.CreateTblProductosTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputLabel value="#{bundle.CreateTblProductosLabel_idProducto}" for="idProducto" />
+                    <h:inputText id="idProducto" value="#{tblProductosController.selected.idProducto}" title="#{bundle.CreateTblProductosTitle_idProducto}" required="true" requiredMessage="#{bundle.CreateTblProductosRequiredMessage_idProducto}"/>
+                    <h:outputLabel value="#{bundle.CreateTblProductosLabel_titulo}" for="titulo" />
+                    <h:inputText id="titulo" value="#{tblProductosController.selected.titulo}" title="#{bundle.CreateTblProductosTitle_titulo}" />
+                    <h:outputLabel value="#{bundle.CreateTblProductosLabel_referencia}" for="referencia" />
+                    <h:inputText id="referencia" value="#{tblProductosController.selected.referencia}" title="#{bundle.CreateTblProductosTitle_referencia}" />
+                    <h:outputLabel value="#{bundle.CreateTblProductosLabel_talla}" for="talla" />
+                    <h:inputText id="talla" value="#{tblProductosController.selected.talla}" title="#{bundle.CreateTblProductosTitle_talla}" />
+                    <h:outputLabel value="#{bundle.CreateTblProductosLabel_color}" for="color" />
+                    <h:inputText id="color" value="#{tblProductosController.selected.color}" title="#{bundle.CreateTblProductosTitle_color}" />
+                    <h:outputLabel value="#{bundle.CreateTblProductosLabel_stock}" for="stock" />
+                    <h:inputText id="stock" value="#{tblProductosController.selected.stock}" title="#{bundle.CreateTblProductosTitle_stock}" />
+                    <h:outputLabel value="#{bundle.CreateTblProductosLabel_descripcion}" for="descripcion" />
+                    <h:inputText id="descripcion" value="#{tblProductosController.selected.descripcion}" title="#{bundle.CreateTblProductosTitle_descripcion}" />
+                </h:panelGrid>
+                <br />
+                <h:commandLink action="#{tblProductosController.create}" value="#{bundle.CreateTblProductosSaveLink}" />
+                <br />
+                <br />
+                <h:commandLink action="#{tblProductosController.prepareList}" value="#{bundle.CreateTblProductosShowAllLink}" immediate="true"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.CreateTblProductosIndexLink}"/>
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>
