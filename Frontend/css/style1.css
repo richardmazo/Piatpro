@@ -1,12 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
 
-:root{
-    --main-color:#d37fbe;
-    --white:#050505;
-    --bg:#f4f4f8;
-    --border:.1rem solid rgba(12, 12, 12, 0.3);
-}
-
 *{
     font-family: 'Roboto', sans-serif;
     margin:0; padding:0;
@@ -38,7 +31,7 @@ html::-webkit-scrollbar-thumb{
 }
 
 body{
-    background: var(--bg);
+    background: #f4f4f8;
 }
 
 section{
@@ -54,7 +47,7 @@ section{
 }
 
 .heading span{
-    color:var(--main-color);
+    color:#d37fbe;
     text-transform: uppercase;
 }
 
@@ -64,7 +57,7 @@ section{
     padding:.9rem 3rem;
     font-size: 1.7rem;
     color:rgb(7, 7, 7);
-    background: var(--main-color);
+    background: #d37fbe;
     cursor: pointer;
 }
 
@@ -73,12 +66,12 @@ section{
 }
 
 .header{
-    background: var(--bg);
+    background: #f4f4f8;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding:1.5rem 7%;
-    border-bottom: var(--border);
+    border-bottom: .1rem solid rgba(12, 12, 12, 0.3);
     position: fixed;
     top:0; left: 0; right: 0;
     z-index: 1000;
@@ -95,8 +88,8 @@ section{
 }
 
 .header .navbar a:hover{
-    color:var(--main-color);
-    border-bottom: .1rem solid var(--main-color);
+    color:#f7f4f6;
+    border-bottom: .1rem solid #d37fbe;
     padding-bottom: .5rem;
 }
 
@@ -108,7 +101,7 @@ section{
 }
 
 .header .icons div:hover{
-    color:var(--main-color);
+    color:#faf6f9;
 }
 
 #menu-btn{
@@ -135,7 +128,6 @@ section{
     height: 100%;
     width: 100%;
     font-size: 1.6rem;
-    color:var(--black);
     padding:1rem;
     text-transform: none;
 }
@@ -144,11 +136,10 @@ section{
     cursor: pointer;
     font-size: 2.2rem;
     margin-right: 1.5rem;
-    color:var(--black);
 }
 
 .header .search-form label:hover{
-    color:var(--main-color);
+    color:#d37fbe;
 }
 
 .header .cart-items-container{
@@ -177,23 +168,21 @@ section{
     top:1rem; right: 1rem;
     font-size: 2rem;
     cursor: pointer;
-    color: var(--black);
 }
 
 .header .cart-items-container .cart-item .fa-times:hover{
-    color:var(--main-color);
+    color:#d37fbe;
 }
 
 
 .header .cart-items-container .cart-item .content h3{
     font-size: 2rem;
-    color:var(--black);
     padding-bottom: .5rem;
 }
 
 .header .cart-items-container .cart-item .content .price{
     font-size: 1.5rem;
-    color:var(--main-color);
+    color:#d37fbe;
 }
 
 .header .cart-items-container .btn{
@@ -213,7 +202,6 @@ section{
 .about .row{
     display: flex;
     align-items: center;
-    background:var(--black);
     flex-wrap: wrap;
 }
 
@@ -249,7 +237,7 @@ section{
 
 .products .box-container .box{
     text-align: center;
-    border:var(--border);
+    border:.1rem solid rgba(12, 12, 12, 0.3);
     padding: 2rem;
 }
 
@@ -258,13 +246,13 @@ section{
     width: 5rem;
     line-height: 5rem;
     font-size: 2rem;
-    border:var(--border);
+    border:.1rem solid rgba(12, 12, 12, 0.3);
     color:rgb(5, 5, 5);
     margin:.3rem;
 }
 
 .products .box-container .box .icons a:hover{
-    background:var(--main-color);
+    background:#d37fbe;
 }
 
 .products .box-container .box .image{
@@ -286,7 +274,7 @@ section{
 
 .products .box-container .box .content .stars i{
     font-size: 1.7rem;
-    color: var(--main-color);
+    color: #d37fbe;
 }
 
 .products .box-container .box .content .price{
@@ -301,7 +289,6 @@ section{
 }
 
 .footer{
-    background:var(--black);
     text-align: center;
 }
 
@@ -315,13 +302,13 @@ section{
     line-height: 5rem;
     font-size: 2rem;
     color:rgb(8, 8, 8);
-    border:var(--border);
+    border:.1rem solid rgba(12, 12, 12, 0.3);
     margin:.3rem;
     border-radius: 50%;
 }
 
 .footer .share a:hover{
-    background-color: var(--main-color);
+    background-color: #d37fbe;
 }
 
 .footer .links{
@@ -335,12 +322,12 @@ section{
 .footer .links a{
     padding:.7rem 2rem;
     color:rgb(8, 8, 8);
-    border:var(--border);
+    border:.1rem solid rgba(12, 12, 12, 0.3);
     font-size: 2rem;
 }
 
 .footer .links a:hover{
-    background:var(--main-color);
+    background:#d37fbe;
 }
 
 .footer .credit{
@@ -351,7 +338,7 @@ section{
 }
 
 .footer .credit span{
-    color:var(--main-color);
+    color:#d37fbe;
 }
 
 
@@ -392,7 +379,7 @@ section{
     .header .navbar{
         position: absolute;
         top:100%; right: -100%;
-        background: #fff;
+        background: rgb(255, 255, 255);
         width: 30rem;
         height: calc(100vh - 9.5rem);
     }
@@ -402,7 +389,7 @@ section{
     }
 
     .header .navbar a{
-        color:var(--white);
+        color:#050505;
         display: block;
         margin:1.5rem;
         padding:.5rem;

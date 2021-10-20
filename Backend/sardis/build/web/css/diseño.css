@@ -1,0 +1,172 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.contenedor {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 100%;
+  max-width: 95%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  background: #FFF !important;
+  margin: 0 auto;
+}
+
+.contenedor .tarjeta {
+  position: relative;
+  background: #000;
+  overflow: hidden;
+  border-radius: 5px;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+  margin-bottom: 20px;
+  padding: 0;
+}
+
+.contenedor .tarjeta:hover {
+  -webkit-transform: translateY(-20px);
+  -ms-transform: translateY(-20px);
+  transform: translateY(-20px);
+  -webkit-box-shadow: 0 20px 20px rgba(0, 0, 0, 0.8);
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.8);
+}
+
+.contenedor .tarjeta .img-box {
+  position: relative;
+  top: 0;
+  left: 0;
+  max-width: 350px;
+  width: 100%;
+  height: auto;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.contenedor .tarjeta:hover .img-box {
+  opacity: 0.5;
+}
+
+.contenedor .tarjeta .img-box img {
+  width: 100%;
+  margin-bottom: 0px;
+  height: 100%;
+}
+
+.contenedor .tarjeta .content {
+  position: absolute;
+  width: 100%;
+  height: 60%;
+  bottom: -100%;
+  padding: 20px;
+  padding-top: 60px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  text-align: center;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.contenedor .tarjeta:hover .content {
+  bottom: 0;
+}
+
+/*Aca estan los hermanos... Importante cambiar si solo se quiere 1*/
+
+.contenedor .tarjeta:nth-child(1) .content {
+  background: -webkit-gradient(linear, left bottom, left top, from(#000000ef), to(transparent));
+  background: -webkit-linear-gradient(bottom, #000000ef, transparent);
+  background: -o-linear-gradient(bottom, #000000ef, transparent);
+  background: linear-gradient(0deg, #000000ef, transparent);
+}
+
+.contenedor .tarjeta:nth-child(2) .content {
+  background: -webkit-gradient(linear, left bottom, left top, from(#000000ef), to(transparent));
+  background: -webkit-linear-gradient(bottom, #000000ef, transparent);
+  background: -o-linear-gradient(bottom, #000000ef, transparent);
+  background: linear-gradient(0deg, #000000ef, transparent);
+}
+
+.contenedor .tarjeta:nth-child(3) .content {
+  background: -webkit-gradient(linear, left bottom, left top, from(#000000ef), to(transparent));
+  background: -webkit-linear-gradient(bottom, #000000ef, transparent);
+  background: -o-linear-gradient(bottom, #000000ef, transparent);
+  background: linear-gradient(0deg, #000000ef, transparent);
+}
+
+.contenedor .tarjeta:nth-child(4) .content {
+  background: -webkit-gradient(linear, left bottom, left top, from(#000000ef), to(transparent));
+  background: -webkit-linear-gradient(bottom, #000000ef, transparent);
+  background: -o-linear-gradient(bottom, #000000ef, transparent);
+  background: linear-gradient(0deg, #000000ef, transparent);
+}
+
+.contenedor .tarjeta .content h2 {
+  margin: 0 0 10px;
+  padding: 0;
+  color: #fff;
+  font-size: 20px;
+}
+
+.contenedor .tarjeta .content h2 span {
+  color: #ffeb3b;
+  font-size: 15px;
+}
+
+.contenedor .tarjeta .content p {
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  font-size: 15px;
+}
+
+.contenedor .tarjeta .content ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 20px 0 0;
+  padding: 0;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.contenedor .tarjeta .content ul li {
+  list-style: none;
+}
+
+.contenedor .tarjeta .content ul li a {
+  color: #fff;
+  padding: 0 10px;
+  font-size: 18px;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
