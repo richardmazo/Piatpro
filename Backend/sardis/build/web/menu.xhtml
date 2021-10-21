@@ -23,6 +23,8 @@
                 <a href="#about">Sobre nosotros</a>
                 <a href="#products">Productos</a>
                 <a href="Login.xhtml">Login</a>
+                <h:link outcome="Login" value="Login"/>
+
             </nav>
 
             <div>
@@ -61,7 +63,6 @@
             </h:panelGroup>    
             <section class="products" id="products">
                 <h1 class="heading"> Nuestros productos </h1>
-                <h4 class="heading"><h:commandLink action="#{tblProductosController.prepareCreate}" value="#{bundle.ListTblProductosCreateLink}"/></h4>
                 <div class="box-container">
                     <ui:repeat value="#{tblProductosController.items}" var="item"> 
                         <div class="box">
@@ -79,8 +80,6 @@
                                 <h4>#{item.descripcion}</h4>
                                 <br></br>
                                 <div class="price">$15.99</div>
-                                <div><h:commandLink action="#{tblProductosController.prepareEdit}" value="#{bundle.ListTblProductosEditLink}"/></div>
-                                <div><h:commandLink action="#{tblProductosController.destroy}" value="#{bundle.ListTblProductosDestroyLink}"/></div>
                             </div>                    
                         </div>
                     </ui:repeat>

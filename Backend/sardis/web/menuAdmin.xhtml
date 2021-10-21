@@ -63,6 +63,7 @@
             </h:panelGroup>    
             <section class="products" id="products">
                 <h1 class="heading"> Nuestros productos </h1>
+                <h4 class="heading"><h:commandLink action="#{tblProductosController.prepareCreate}" value="#{bundle.ListTblProductosCreateLink}"/></h4>
                 <div class="box-container">
                     <ui:repeat value="#{tblProductosController.items}" var="item"> 
                         <div class="box">
@@ -80,6 +81,10 @@
                                 <h4>#{item.descripcion}</h4>
                                 <br></br>
                                 <div class="price">$15.99</div>
+                                <h:form>
+                                 <div><h:commandLink action="#{tblProductosController.prepareEdit}" value="#{bundle.ListTblProductosEditLink}"/></div>
+                                 </h:form>
+                                <div><h:commandLink action="#{tblProductosController.destroy}" value="#{bundle.ListTblProductosDestroyLink}"/></div>
                             </div>                    
                         </div>
                     </ui:repeat>

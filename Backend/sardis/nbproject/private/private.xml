@@ -3,20 +3,15 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Piatpro/Piatpro/Backend/sardis/src/java/jpa/entities/TblProductos.java</file>
-            <file>file:/C:/Piatpro/Piatpro/Backend/sardis/web/WEB-INF/glassfish-resources.xml</file>
-            <file>file:/C:/Piatpro/Piatpro/Backend/sardis/web/WEB-INF/faces-config.xml</file>
-            <file>file:/C:/Piatpro/Piatpro/Backend/sardis/src/java/jpa/sessions/TblProductosFacade.java</file>
-            <file>file:/C:/Piatpro/Piatpro/Backend/sardis/src/java/jpa/sessions/AbstractFacade.java</file>
-            <file>file:/C:/Piatpro/Piatpro/Backend/sardis/web/tblProductos/List.xhtml</file>
-            <file>file:/C:/Piatpro/Piatpro/Backend/sardis/web/menu.xhtml</file>
-            <file>file:/C:/Piatpro/Piatpro/Backend/sardis/web/tblProductos/Create.xhtml</file>
             <file>file:/C:/Piatpro/Piatpro/Backend/sardis/src/java/jsf/TblProductosController.java</file>
-            <file>file:/C:/Piatpro/Piatpro/Backend/sardis/src/java/jpa/entities/TblUsuarios.java</file>
-            <file>file:/C:/Piatpro/Piatpro/Backend/sardis/src/java/jpa/entities/TblRol.java</file>
-            <file>file:/C:/Piatpro/Piatpro/Backend/sardis/web/WEB-INF/web.xml</file>
+            <file>file:/C:/Piatpro/Piatpro/Backend/sardis/src/java/jpa/entities/TblProductos.java</file>
+            <file>file:/C:/Piatpro/Piatpro/Backend/sardis/web/WEB-INF/faces-config.xml</file>
+            <file>file:/C:/Piatpro/Piatpro/Backend/sardis/web/tblProductos/List.xhtml</file>
             <file>file:/C:/Piatpro/Piatpro/Backend/sardis/src/java/resource/Bundle.properties</file>
             <file>file:/C:/Piatpro/Piatpro/Backend/sardis/web/Login.xhtml</file>
+            <file>file:/C:/Piatpro/Piatpro/Backend/sardis/web/menu.xhtml</file>
+            <file>file:/C:/Piatpro/Piatpro/Backend/sardis/web/index.xhtml</file>
+            <file>file:/C:/Piatpro/Piatpro/Backend/sardis/web/newxhtml.xhtml</file>
         </group>
     </open-files>
 </project-private>

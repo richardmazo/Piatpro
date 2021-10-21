@@ -5,19 +5,33 @@ To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
     <head>
         <title>Formulario login</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <link rel="stylesheet" href="./css/estilo.css"></link>
     </head>
     <body>
+<h:form>
     <section class="form-login">
-        <h1>LOGIN</h1>
-        <input class="controls" type="text" name="usuario" placeholder="Usuario"></input>
-        <input class="controls" type="password" name="contraseña" placeholder="Contraseña"></input>
-        <input class="buttons" type="submit" value="Ingresar"></input>
-        <a href="Formulario.xhtml" target="_parent"><button class="buttons">Registrarse</button></a>
-    </section>
+        <h1>Login</h1>
+        <!--<input class="controls" type="text" name="usuario" placeholder="Usuario"></input>-->
+        <h:outputText value="Usuario: "/>
+        <h:inputText  class="controls" value="#{login.correo}"/>
+        <!--<input class="controls" type="password" name="contraseña" placeholder="Contraseña"></input>-->
+        <br></br>
+        <br></br>
+        <br></br>
+        <h:outputText value="Password: "/>
+        <h:inputSecret class="controls" value="#{login.password}"/>  
+        <br></br>
+        <br></br>     
+        <!--<input class="buttons" type="submit" value="Ingresar"></input>-->
+        <h:commandButton class="buttons" id="boton" value="Login" action="#{login.autenticacion()}"/>
+        <br></br>
+        <a href="Formulario.html" target="_parent"><button class="buttons">Registrarse</button></a>
+    </section> 
+ </h:form>    
     </body>
 </html>

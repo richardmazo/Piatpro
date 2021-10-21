@@ -10,7 +10,27 @@
         </resource-bundle>
     </application>
     
-
+    <navigation-rule>
+        <from-view-id>menu.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>login</from-outcome>
+            <to-view-id>/Login.xhtml </to-view-id>
+        </navigation-case>
+    </navigation-rule>    
+    
+    <navigation-rule>
+        <from-outcome>Login.xhtml</from-outcome>
+        <navigation-case>
+            <from-outcome>Exitoso</from-outcome>
+            <to-view-id>/menuAdmin.xhtml </to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>Fallido</from-outcome>
+            <to-view-id>/menu.xhtml </to-view-id>
+        </navigation-case>        
+    </navigation-rule>
+    
+    
     
     
 </faces-config>
