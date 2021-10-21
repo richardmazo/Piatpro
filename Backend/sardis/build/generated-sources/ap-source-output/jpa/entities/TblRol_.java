@@ -6,7 +6,7 @@ import javax.persistence.metamodel.SingularAttribute;
 import javax.persistence.metamodel.StaticMetamodel;
 import jpa.entities.TblUsuarios;
 
-@Generated(value="EclipseLink-2.5.2.v20140319-rNA", date="2021-10-19T21:55:39")
+@Generated(value="EclipseLink-2.5.2.v20140319-rNA", date="2021-10-20T19:03:16")
 @StaticMetamodel(TblRol.class)
 public class TblRol_ { 
 
