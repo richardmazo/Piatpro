@@ -22,8 +22,7 @@
                 <a href="#home">home</a>
                 <a href="#about">Sobre nosotros</a>
                 <a href="#products">Productos</a>
-                <a href="Login.xhtml">Login</a>
-                <h:link outcome="Login" value="Login"/>
+                <h:link outcome="menu" value="Pagina principal"/>
 
             </nav>
 
@@ -64,6 +63,7 @@
             <section class="products" id="products">
                 <h1 class="heading"> Nuestros productos </h1>
                 <h4 class="heading"><h:commandLink action="#{tblProductosController.prepareCreate}" value="#{bundle.ListTblProductosCreateLink}"/></h4>
+                <h:commandLink action="#{tblProductosController.prepareCreate}" value="#{bundle.ListTblProductosCreateLink}"/>
                 <div class="box-container">
                     <ui:repeat value="#{tblProductosController.items}" var="item"> 
                         <div class="box">
