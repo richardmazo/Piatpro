@@ -67,18 +67,21 @@
                         <div class="box">
                             <div class="icons">
                                 <a href="#">Comprar</a>
-                                <h3>#{item.referencia}</h3>
+                                <h3><p>Referencia: #{item.referencia}</p></h3>
                             </div>
                             <div class="image">
                                 <img src="https://ih1.redbubble.net/image.1219220994.6424/ssrco,classic_tee,mens,e5d6c5:f62bbf65ee,front_alt,square_product,600x600.jpg" alt=""></img>
                             </div> 
                             <div class="content">
                                 <h3>#{item.titulo}</h3>
-                                <h4>#{item.talla}</h4>
-                                <h4>#{item.color}</h4>
-                                <h4>#{item.descripcion}</h4>
                                 <br></br>
-                                <div class="price">$15.99</div>
+                                <h2><p>Talla: #{item.talla}</p></h2>                                
+                                <br></br>
+                                <h4><p>Color: #{item.color}</p></h4>
+                                <br></br>
+                                <h4><p>Descripción: #{item.descripcion}</p></h4>
+                                <br></br>
+                                <div class="price">Precio: 50.000 COP</div>
                             </div>                    
                         </div>
                     </ui:repeat>
@@ -102,7 +105,7 @@
                 <a href="#home">Home</a>
                 <a href="#about">Sobre nosotros</a>
                 <a href="#products">Productos</a>
-                <a href="Login.html">Login</a>
+                <h:link outcome="Login" value="Administrar pagina"/>
             </div>
 
             <div class="credit"><b>Creada por Leidy, Lida, Daniel, Marlon, Richard. Somos:PIATPRO- Software Develpment</b></div>
